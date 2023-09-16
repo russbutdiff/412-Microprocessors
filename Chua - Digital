@@ -1,0 +1,17 @@
+Chua_Digital
+https://www.tinkercad.com/things/6eCxhsqHtk8-incredible-lahdi-allis/editel?sharecode=MpdTFkLW9yrmM9k5Gw0AULSDkGXDVR4sTyMF0FxfpO4&fbclid=IwAR2NyDnLu1CxtvP9pybuqTpDCBPE4LKZs54qMif_9UWoZm2fdAdIyAqM4po
+
+int led =6; 
+
+void setup() {
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+void loop() {
+  digitalWrite(led, HIGH);
+  delay(500);
+  Serial.println("ON");
+  digitalWrite(led, LOW);
+  delay(500); 
+  Serial.println("OFF");
+}
