@@ -1,0 +1,21 @@
+Chua_Analog
+https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.tinkercad.com%2Fthings%2F6eCxhsqHtk8-incredible-lahdi-allis%2Feditel%3Fsharecode%3DMpdTFkLW9yrmM9k5Gw0AULSDkGXDVR4sTyMF0FxfpO4%26fbclid%3DIwAR2NyDnLu1CxtvP9pybuqTpDCBPE4LKZs54qMif_9UWoZm2fdAdIyAqM4po&h=AT1Rk1-pwVjutssz9hQau0xwNbWCOrHlPibqjWouQxWuyKszkQc7C0bJQb2w2CpJuktgC07A2fDQdgWrL2aD16rnGTCMUnClhS5S8gC_0u5dXSvFq1FGSawhWXHhRrbWqFtRXA
+
+int ledPin = 5;     
+int potentiometerPin = 2;  
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  int potentiometerValue = analogRead(potentiometerPin);
+
+ Serial.println(potentiometerValue);
+  if (potentiometerValue > 200) {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+}
